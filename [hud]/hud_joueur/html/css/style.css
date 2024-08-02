@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+#hud {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Réduit l'espace entre les cercles */
+}
+
+.circle {
+    position: relative;
+    width: 50px; /* Taille du cercle */
+    height: 50px; /* Taille du cercle */
+    border-radius: 50%;
+    background-color: white; /* Fond blanc à l'intérieur des cercles */
+}
+
+.circle svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); /* Rotation pour commencer le remplissage en haut */
+}
+
+circle {
+    fill: none;
+    stroke-width: 5; /* Largeur du contour du cercle */
+    transition: stroke-dashoffset 0.5s ease; /* Animation de transition pour le décalage */
+}
+
+circle:first-child {
+    stroke: #ddd; /* Couleur de fond du cercle */
+}
+
+#health-progress {
+    stroke: red; /* Couleur de la barre de progression de la vie */
+}
+
+#hunger-progress {
+    stroke: orange; /* Couleur de la barre de progression de la faim */
+}
+
+#thirst-progress {
+    stroke: blue; /* Couleur de la barre de progression de la soif */
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px; /* Taille par défaut des icônes */
+    height: 30px; /* Taille par défaut des icônes */
+    opacity: 0.9; /* Légère transparence pour l'icône */
+}
+
+.icon-hunger {
+    width: 20px; /* Taille réduite de l'icône de faim */
+    height: 20px; /* Taille réduite de l'icône de faim */
+}

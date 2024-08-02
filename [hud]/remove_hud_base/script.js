@@ -1,0 +1,1 @@
+console.log('Abdelrmb\'s Remove Basic Hud script ensured successfuly');
